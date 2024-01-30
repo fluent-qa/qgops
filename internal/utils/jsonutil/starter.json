@@ -1,0 +1,18 @@
+{
+  "starters": [
+    {
+      "name": "java",
+      "desc": "Create Java Template Project",
+      "commands": [
+        "git clone https://github.com/fluent-qa/fluent-java-tpl"
+      ]
+    },
+    {
+      "name": "python",
+      "desc": "Create Python Template Project",
+      "commands": [
+        "cookiecutter https://github.com/fluent-qa/fluentqa-pytpl.git --no-input"
+      ]
+    }
+  ]
+}

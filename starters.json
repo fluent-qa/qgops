@@ -1,0 +1,35 @@
+{
+  "actions": [
+    {
+      "name": "java",
+      "desc": "Create Java Template Project",
+      "commands": [
+        "git clone https://github.com/fluent-qa/fluent-java-tpl",
+        "cd fluent-java-tpl && mv .git git_bnk"
+      ]
+    },
+    {
+      "name": "ts-lib",
+      "desc": "Create typescript lib Template Project",
+      "commands": [
+        "git clone https://github.com/fluent-qa/ts-lib-starter",
+        "cd ts-lib-starter && mv.git git_bnk"
+      ]
+    },
+    {
+      "name": "mono",
+      "desc": "Create typescript mono Template Project",
+      "commands": [
+        "git clone https://github.com/qdriven/mono-ts-starter.git",
+        "cd mono-ts-starter && mv.git git_bnk"
+      ]
+    },
+    {
+      "name": "python",
+      "desc": "Create Python Template Project",
+      "commands": [
+        "cookiecutter https://github.com/fluent-qa/fluentqa-pytpl.git --no-input"
+      ]
+    }
+  ]
+}
