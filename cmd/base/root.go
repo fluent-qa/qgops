@@ -9,7 +9,7 @@ var VERSION = "0.0.2"
 var CmdRoot = &cobra.Command{
 	Use:     "fluent",
 	Example: "fluent <category> <action> <--options>",
-	Short:   "fluent is for personal usage",
+	Short:   "fluent is for feeds usage",
 	Version: VERSION,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return cmd.Help()
