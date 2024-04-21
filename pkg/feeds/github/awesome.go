@@ -1,12 +1,12 @@
-package awesome
+package github
 
 import (
-	"github.com/qdriven/qfluent-go/internal/http"
+	http "github.com/fluent-qa/qfluent-ops/internal/http"
 	"os"
 	"strings"
 )
 
-// https://raw.githubusercontent.com/luban-agi/Awesome-AIGC-Tutorials/main/README.md
+// GetGithubAwesomeContent https://raw.githubusercontent.com/luban-agi/Awesome-AIGC-Tutorials/main/README.md
 func GetGithubAwesomeContent(githubUrl string) string {
 	url := strings.Replace(githubUrl, "github.com", "raw.githubusercontent.com", 1)
 	url = strings.Replace(url, ".git", "/main/README.md", 1)

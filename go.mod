@@ -6,6 +6,7 @@ toolchain go1.21.4
 
 require (
 	github.com/88250/lute v1.7.6
+	github.com/PuerkitoBio/goquery v1.9.1
 	github.com/bwmarrin/discordgo v0.27.1
 	github.com/chyroc/lark v0.0.113
 	github.com/gin-contrib/static v1.1.0
@@ -34,6 +35,7 @@ require (
 require (
 	github.com/alecthomas/chroma v0.10.0 // indirect
 	github.com/andybalholm/brotli v1.0.6 // indirect
+	github.com/andybalholm/cascadia v1.3.2 // indirect
 	github.com/bytedance/sonic v1.10.2 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect

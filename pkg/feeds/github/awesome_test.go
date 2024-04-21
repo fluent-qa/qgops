@@ -1,4 +1,4 @@
-package awesome
+package github
 
 import "testing"
 
