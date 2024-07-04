@@ -14,6 +14,9 @@ PHONY: test
 test: ## run go tests
 	go test -v ./...
 
+PHONY: PB
+PB: ## build pocketbase
+	go build app/pb/main.go
 
 integration-test: ### run integration-test
 	go clean -testcache && go test -v ./integration-test/...

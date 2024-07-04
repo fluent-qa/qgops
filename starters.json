@@ -28,7 +28,7 @@
       "name": "python",
       "desc": "Create Python Template Project",
       "commands": [
-        "cookiecutter https://github.com/fluent-qa/fluentqa-pytpl.git --no-input"
+        "pdm init -n https://github.com/fluent-qa/fluentqa-pytpl.git"
       ]
     }
   ]

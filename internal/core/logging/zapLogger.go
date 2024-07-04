@@ -5,7 +5,7 @@ Not Used Yet
 */
 import (
 	"fmt"
-	"github.com/qdriven/qfluent-go/internal/utils"
+	"github.com/fluent-qa/qfluent-ops/internal/utils"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"

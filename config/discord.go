@@ -4,6 +4,14 @@ import (
 	"github.com/spf13/viper"
 )
 
+type DiscordConf struct {
+	DISCORD_USER_TOKEN string
+	DISCORD_BOT_TOKEN  string
+	DISCORD_SERVER_ID  string
+	DISCORD_CHANNEL_ID string
+	CB_URL             string
+}
+
 var DiscordConfig *DiscordConf
 
 func LoadDiscordConfig(cfg string) (*DiscordConf, error) {
