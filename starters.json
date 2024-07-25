@@ -29,6 +29,8 @@
       "desc": "Create Python Template Project",
       "commands": [
         "pdm init -n https://github.com/fluent-qa/fluentqa-pytpl.git"
+        "rm -rf templates/"
+
       ]
     }
   ]
