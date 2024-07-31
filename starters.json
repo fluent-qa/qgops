@@ -9,6 +9,14 @@
       ]
     },
     {
+      "name": "go",
+      "desc": "Create Go Template Project",
+      "commands": [
+        "git clone https://github.com/fluent-qa/fluentqa-gotpl.git --depth=1",
+        "cd fluentqa-gotpl && mv .git git_bnk "
+      ]
+    },
+    {
       "name": "ts-lib",
       "desc": "Create typescript lib Template Project",
       "commands": [
@@ -28,7 +36,7 @@
       "name": "python",
       "desc": "Create Python Template Project",
       "commands": [
-        "pdm init -n https://github.com/fluent-qa/fluentqa-pytpl.git"
+        "pdm init -n https://github.com/fluent-qa/fluentqa-pytpl.git",
         "rm -rf templates/"
 
       ]

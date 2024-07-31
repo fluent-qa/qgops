@@ -10,6 +10,7 @@ import (
 )
 
 var CurrentDir = os.Getenv("FLUENT_HOME")
+
 var actions = shell.LoadCommands(path.Join(CurrentDir, "starters.json"))
 
 var (
