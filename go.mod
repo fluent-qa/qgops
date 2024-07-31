@@ -1,11 +1,8 @@
 module github.com/fluent-qa/qfluent-ops
 
-go 1.21.3
-
-toolchain go1.21.4
+go 1.21.4
 
 require (
-	github.com/88250/lute v1.7.6
 	github.com/PuerkitoBio/goquery v1.9.1
 	github.com/bwmarrin/discordgo v0.27.1
 	github.com/chyroc/lark v0.0.113
@@ -21,7 +18,6 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/pkg/errors v0.9.1
 	github.com/pocketbase/pocketbase v0.22.9
-	github.com/qdriven/qfluent-go v0.0.0-20240108033320-e302bfd94454
 	github.com/samber/do v1.6.0
 	github.com/samber/lo v1.39.0
 	github.com/spf13/cobra v1.8.0
@@ -35,7 +31,6 @@ require (
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.7 // indirect
-	github.com/alecthomas/chroma v0.10.0 // indirect
 	github.com/andybalholm/brotli v1.0.6 // indirect
 	github.com/andybalholm/cascadia v1.3.2 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
@@ -66,7 +61,6 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/disintegration/imaging v1.6.2 // indirect
-	github.com/dlclark/regexp2 v1.10.0 // indirect
 	github.com/domodwyer/mailyak/v3 v3.6.2 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/fatih/color v1.16.0 // indirect
@@ -83,7 +77,6 @@ require (
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/pprof v0.0.0-20231229205709-960ae82b1e42 // indirect
 	github.com/googleapis/gax-go/v2 v2.12.3 // indirect
-	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
