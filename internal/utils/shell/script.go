@@ -851,7 +851,7 @@ func (p *Pipe) WithError(err error) *Pipe {
 // [Pipe.Do], [Pipe.Get], or [Pipe.Post]. For example, to make a request using
 // a client with a timeout:
 //
-//	NewPipe().WithHTTPClient(&http.Client{
+//	NewPipe().WithHTTPClient(&qhttp.Client{
 //	        Timeout: 10 * time.Second,
 //	}).Get("https://example.com").Stdout()
 func (p *Pipe) WithHTTPClient(c *http.Client) *Pipe {

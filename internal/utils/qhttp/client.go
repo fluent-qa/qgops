@@ -1,4 +1,4 @@
-package http
+package qhttp
 
 import (
 	"github.com/imroc/req/v3"

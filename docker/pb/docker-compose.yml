@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  pocketblocks:
+    container_name: pocket_block
+    image: ghcr.io/internoapp/pocketblocks:latest
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./data:/pocketblocks/data
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider qhttp://localhost:8080/api/health || exit 1
+      interval: 10s
+      retries: 20
+      start_period: 5s
+      timeout: 10s

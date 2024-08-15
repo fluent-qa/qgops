@@ -53,7 +53,7 @@ var DocxCodeLang2MdStr = map[lark.DocxCodeLanguage]string{
 	lark.DocxCodeLanguageGroovy:       "groovy",
 	lark.DocxCodeLanguageHTML:         "html",
 	lark.DocxCodeLanguageHTMLBars:     "htmlbars",
-	lark.DocxCodeLanguageHTTP:         "http",
+	lark.DocxCodeLanguageHTTP:         "qhttp",
 	lark.DocxCodeLanguageHaskell:      "haskell",
 	lark.DocxCodeLanguageJSON:         "json",
 	lark.DocxCodeLanguageJava:         "java",
