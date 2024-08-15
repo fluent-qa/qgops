@@ -2,10 +2,11 @@ package code
 
 import (
 	"fmt"
-	"github.com/fluent-qa/qfluent-ops/internal/utils/shell"
 	"os"
 	"path"
 	"testing"
+
+	"github.com/fluent-qa/qgops/internal/utils/shell"
 )
 
 func TestCreateStartProject(t *testing.T) {

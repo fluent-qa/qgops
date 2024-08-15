@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/fluent-qa/qfluent-ops/cmd/base"
-	"github.com/fluent-qa/qfluent-ops/cmd/code"
+	"github.com/fluent-qa/qgops/cmd/base"
+	"github.com/fluent-qa/qgops/cmd/code" // Add this import
 )
 
 func init() {
