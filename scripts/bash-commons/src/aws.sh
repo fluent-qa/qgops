@@ -100,7 +100,7 @@ function aws_get_instance_metadata_version_in_use {
 ##################################################################################
 # The following functions aim to support backward compatibility with IMDSv1 by
 # maintaining the arity of all previous function calls, but using $default_instance_metadata_version
-# to determine which implementation's code path to follow
+# to determine which implementation's starter path to follow
 
 # This function has been modified to simultaneously support Instance Metadata service versions 1 and 2
 # This is due to the fact that we will need to operate in a split-brain mode while all our dependent

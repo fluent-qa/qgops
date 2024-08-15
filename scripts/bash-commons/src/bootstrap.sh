@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Sets some Bash options to encourage well formed code.
+# Sets some Bash options to encourage well formed starter.
 # For example, some of the options here will cause the script to terminate as
 # soon as a command fails. Another option will cause an error if an undefined
 # variable is used.

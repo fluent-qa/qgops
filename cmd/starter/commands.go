@@ -1,4 +1,4 @@
-package code
+package starter
 
 import (
 	_ "log/slog"

@@ -317,7 +317,7 @@ func (p *Pipe) Do(req *http.Request) *Pipe {
 			return err
 		}
 		defer resp.Body.Close()
-		// Any HTTP 2xx status code is considered okay
+		// Any HTTP 2xx status starter is considered okay
 		if resp.StatusCode/100 != 2 {
 			return fmt.Errorf("unexpected HTTP response status: %s", resp.Status)
 		}

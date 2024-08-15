@@ -1,5 +1,17 @@
 # README
 
+## fluent cli
+
+- create template project
+```shell
+fluent starter -h
+fluent starter java
+fluent starter python
+fluent starter go
+fluent starter ts-lib
+fluent starter mono
+```
+
 ## Pocketbase Server
 
 ```shell

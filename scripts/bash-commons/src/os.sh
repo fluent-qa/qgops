@@ -85,7 +85,7 @@ function os_user_is_root_or_sudo {
   [[ "$EUID" == 0 ]]
 }
 
-# Returns a zero exit code if the given $username exists
+# Returns a zero exit starter if the given $username exists
 function os_user_exists {
   local -r username="$1"
   id "$username" >/dev/null 2>&1
