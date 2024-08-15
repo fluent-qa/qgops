@@ -1,13 +1,14 @@
 package shell
 
 import (
-	"github.com/fluent-qa/qfluent-ops/internal/utils"
-	"github.com/fluent-qa/qfluent-ops/internal/utils/jsonutil"
-	"github.com/samber/lo"
 	"io"
 	"log"
 	"log/slog"
 	"os"
+
+	"github.com/fluent-qa/qgops/internal/utils"
+	"github.com/fluent-qa/qgops/internal/utils/jsonutil"
+	"github.com/samber/lo"
 )
 
 type ActionSet struct {
@@ -49,7 +50,7 @@ func ExecShellCommands(jsonFile string, data any) {
 			}
 			_, err := ExecShellCommand(output)
 			if err != nil {
-				slog.Error("execute command set failed,", err)
+				slog.Error("execute command set failed,", "error", err)
 				return
 			}
 		})

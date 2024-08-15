@@ -1,12 +1,13 @@
 package code
 
 import (
-	"github.com/fluent-qa/qfluent-ops/internal/utils/shell"
-	"github.com/spf13/cobra"
 	_ "log/slog"
 	"os"
 	"path"
 	"strings"
+
+	"github.com/fluent-qa/qgops/internal/utils/shell"
+	"github.com/spf13/cobra"
 )
 
 var CurrentDir = os.Getenv("FLUENT_HOME")

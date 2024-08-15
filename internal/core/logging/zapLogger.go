@@ -5,13 +5,14 @@ Not Used Yet
 */
 import (
 	"fmt"
-	"github.com/fluent-qa/qfluent-ops/internal/utils"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
-	"gopkg.in/natefinch/lumberjack.v2"
 	"os"
 	"path/filepath"
 	"time"
+
+	"github.com/fluent-qa/qgops/internal/utils"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
+	"gopkg.in/natefinch/lumberjack.v2"
 )
 
 type _zap struct {
