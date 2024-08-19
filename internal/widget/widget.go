@@ -10,7 +10,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/glanceapp/glance/internal/feed"
+	"github.com/fluent-qa/qgops/pkg/feed"
 
 	"gopkg.in/yaml.v3"
 )

@@ -3,10 +3,9 @@ package widget
 import (
 	"errors"
 	"fmt"
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
 	"time"
-
-	"github.com/glanceapp/glance/internal/assets"
 )
 
 type Clock struct {

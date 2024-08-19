@@ -3,10 +3,9 @@ package widget
 import (
 	"errors"
 	"fmt"
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
 	"net/url"
-
-	"github.com/glanceapp/glance/internal/assets"
 )
 
 type IFrame struct {

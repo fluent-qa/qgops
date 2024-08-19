@@ -2,11 +2,11 @@ package widget
 
 import (
 	"context"
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
 	"time"
 
-	"github.com/glanceapp/glance/internal/assets"
-	"github.com/glanceapp/glance/internal/feed"
+	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Markets struct {

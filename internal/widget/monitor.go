@@ -2,12 +2,12 @@ package widget
 
 import (
 	"context"
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
 	"strconv"
 	"time"
 
-	"github.com/glanceapp/glance/internal/assets"
-	"github.com/glanceapp/glance/internal/feed"
+	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 func statusCodeToText(status int) string {

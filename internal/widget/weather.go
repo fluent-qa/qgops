@@ -5,8 +5,7 @@ import (
 	"fmt"
 	"html/template"
 
-	"github.com/glanceapp/glance/internal/assets"
-	"github.com/glanceapp/glance/internal/feed"
+	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Weather struct {

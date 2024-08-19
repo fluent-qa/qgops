@@ -2,11 +2,10 @@ package widget
 
 import (
 	"context"
+	"github.com/fluent-qa/qgops/internal/assets"
+	"github.com/fluent-qa/qgops/pkg/feed"
 	"html/template"
 	"time"
-
-	"github.com/glanceapp/glance/internal/assets"
-	"github.com/glanceapp/glance/internal/feed"
 )
 
 type Calendar struct {

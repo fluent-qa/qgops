@@ -1,9 +1,8 @@
 package widget
 
 import (
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
-
-	"github.com/glanceapp/glance/internal/assets"
 )
 
 type Bookmarks struct {

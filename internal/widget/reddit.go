@@ -3,12 +3,12 @@ package widget
 import (
 	"context"
 	"errors"
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
 	"strings"
 	"time"
 
-	"github.com/glanceapp/glance/internal/assets"
-	"github.com/glanceapp/glance/internal/feed"
+	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Reddit struct {

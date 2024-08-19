@@ -3,12 +3,11 @@ package widget
 import (
 	"context"
 	"errors"
+	"github.com/fluent-qa/qgops/internal/assets"
+	"github.com/fluent-qa/qgops/pkg/feed"
 	"html/template"
 	"net/url"
 	"time"
-
-	"github.com/glanceapp/glance/internal/assets"
-	"github.com/glanceapp/glance/internal/feed"
 )
 
 type Extension struct {

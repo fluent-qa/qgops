@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"html/template"
 	"strings"
-
-	"github.com/glanceapp/glance/internal/assets"
 )
 
 type SearchBang struct {
