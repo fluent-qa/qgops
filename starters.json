@@ -25,6 +25,14 @@
       ]
     },
     {
+      "name": "fe-next",
+      "desc": "Create next shacdn-ui project",
+      "commands": [
+        "git clone https://github.com/fluent-qa/fe-next-starter",
+        "cd fe-next-starter && mv.git git_bnk"
+      ]
+    },
+    {
       "name": "mono",
       "desc": "Create typescript mono Template Project",
       "commands": [
