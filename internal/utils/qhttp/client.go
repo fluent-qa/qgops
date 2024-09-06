@@ -18,8 +18,13 @@ func NewHttpClient() *Client {
 	}
 }
 
-func (h Client) Get(url string) (string, string, *req.Response) {
+func (h *Client) Get(url string) (string, string, *req.Response) {
 	resp := h.Client.R(). // Use R() to create a request.
 				MustGet(url)
 	return resp.Status, resp.String(), resp
+}
+
+func (h *Client) DebugOptions() {
+	req.EnableAutoDecode()
+	req.EnableDebugLog()
 }

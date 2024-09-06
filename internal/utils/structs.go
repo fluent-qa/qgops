@@ -2,7 +2,9 @@ package utils
 
 import (
 	"fmt"
+	"github.com/samber/lo"
 	"reflect"
+	"strings"
 )
 
 // StructToMap : returns a map of names to values for struct passed .
@@ -36,4 +38,14 @@ func CopyToStringStruct(src interface{}, dest interface{}) {
 		newField := newStructValue.Elem().FieldByName(fieldname)
 		newField.SetString(fmt.Sprintf("%v", srcField.Interface()))
 	}
+}
+
+func FilterStringMap(mapping []string, key string) []string {
+	matching := lo.FilterMap(mapping, func(x string, _ int) (string, bool) {
+		if strings.HasSuffix(x, key) {
+			return x, true
+		}
+		return "", false
+	})
+	return matching
 }
