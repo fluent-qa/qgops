@@ -22,6 +22,8 @@ var (
 		Long:      "fluent start " + strings.Join(AvailableStarter, ","),
 		Example:   "fluent start " + AvailableStarter[0],
 		ValidArgs: AvailableStarter,
+		//ValidArgsFunction: ;
+		//RunE
 		Run: func(cmd *cobra.Command, args []string) {
 			category := args[0]
 			actions.ExecuteActionByName(category)
