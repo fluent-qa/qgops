@@ -1,0 +1,2 @@
+installations:
+  - go get github.com/gookit/goutil
