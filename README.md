@@ -65,14 +65,14 @@ Project Layout:
 │   └── reaction_groups_test.go
 ├── build
 │   └── windows
-│       ├── gh.wixproj
-│       ├── gh.wxs
+│       ├── ci.wixproj
+│       ├── ci.wxs
 │       └── ui.wxs
 ├── cmd
 │   ├── gen-docs
 │   │   ├── main.go
 │   │   └── main_test.go
-│   └── gh
+│   └── ci
 │       ├── main.go
 │       └── main_test.go
 ├── context
@@ -82,7 +82,7 @@ Project Layout:
 ├── docs
 │   ├── README.md
 │   ├── command-line-syntax.md
-│   ├── gh-vs-hub.md
+│   ├── ci-vs-hub.md
 │   ├── install_linux.md
 │   ├── multiple-accounts.md
 │   ├── project-layout.md

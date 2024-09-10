@@ -1,12 +1,13 @@
 package main
 
 import (
+	"github.com/fluent-qa/qgops/cmd/actions"
 	"github.com/fluent-qa/qgops/cmd/base"
-	"github.com/fluent-qa/qgops/cmd/starter" // Add this import
 )
 
 func init() {
-	base.CmdRoot.AddCommand(starter.StarterCmd)
+	base.CmdRoot.AddCommand(actions.StarterCmd)
+	base.CmdRoot.AddCommand(actions.IssueCmd)
 }
 func main() {
 	_ = base.CmdRoot.Execute()
