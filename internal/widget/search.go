@@ -2,6 +2,7 @@ package widget
 
 import (
 	"fmt"
+	"github.com/fluent-qa/qgops/internal/assets"
 	"html/template"
 	"strings"
 )
