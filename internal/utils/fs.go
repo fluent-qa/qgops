@@ -19,6 +19,18 @@ func DirectoryExist(path string) (bool, error) {
 	return false, err
 }
 
-func WriteStringToFile(content, targetPath string) {
+func WriteStringToFile(content, targetPath string) error {
+	err := os.WriteFile(targetPath, []byte(content), 0644)
+	if err != nil {
+		return err
+	}
+	return nil
+}
 
+func ReadStringFromFile(targetPath string) (string, error) {
+	file, err := os.ReadFile(targetPath)
+	if err != nil {
+		return "", err
+	}
+	return string(file), nil
 }

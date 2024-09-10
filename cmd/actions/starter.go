@@ -12,10 +12,10 @@ import (
 
 var CurrentDir = os.Getenv("FLUENT_HOME")
 
-var actions = shell.LoadCommands(path.Join(CurrentDir, "starters.json"))
+var starterActions = shell.LoadCommands(path.Join(CurrentDir, "starters.json"))
 
 var (
-	AvailableStarter = actions.GetAvailableActionNames()
+	AvailableStarter = starterActions.GetAvailableActionNames()
 	StarterCmd       = &cobra.Command{
 		Use:       "starter",
 		Short:     "fluent start " + strings.Join(AvailableStarter, ","),
@@ -26,7 +26,7 @@ var (
 		//RunE
 		Run: func(cmd *cobra.Command, args []string) {
 			category := args[0]
-			actions.ExecuteActionByName(category)
+			starterActions.ExecuteActionByName(category)
 		},
 	}
 )
