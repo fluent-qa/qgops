@@ -2,7 +2,6 @@ package actions
 
 import (
 	_ "log/slog"
-	"os"
 	"path"
 	"strings"
 
@@ -10,9 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var CurrentDir = os.Getenv("FLUENT_HOME")
-
-var starterActions = shell.LoadCommands(path.Join(CurrentDir, "starters.json"))
+var starterActions = shell.LoadCommands(path.Join(WorkSpaceDir, "starters.json"))
 
 var (
 	AvailableStarter = starterActions.GetAvailableActionNames()

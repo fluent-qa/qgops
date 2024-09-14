@@ -2,7 +2,6 @@ package shell
 
 import (
 	"io"
-	"log"
 	"log/slog"
 	"os"
 
@@ -29,7 +28,7 @@ var NotFoundAction = &NamedAction{
 func ExecShellCommand(cmd string) (int, error) {
 	return Exec(cmd).
 		FilterScan(func(s string, writer io.Writer) {
-			log.Println(s)
+			slog.Info(s)
 		}).Stdout()
 }
 

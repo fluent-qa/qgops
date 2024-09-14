@@ -1,0 +1,17 @@
+{
+  "actions": [
+    {
+      "name": "echo",
+      "desc": "try cli",
+      "commands": [
+        "echo \"hello fluent cli\""
+      ]
+    },    {
+      "name": "mac-cleanup",
+      "desc": "cleanup mac pc to free disk space",
+      "commands": [
+        "sh mac-cleanup.sh"
+      ]
+    }
+  ]
+}

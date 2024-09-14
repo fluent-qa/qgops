@@ -8,6 +8,7 @@ import (
 func init() {
 	base.CmdRoot.AddCommand(actions.StarterCmd)
 	base.CmdRoot.AddCommand(actions.IssueCmd)
+	base.CmdRoot.AddCommand(actions.UtilCmd)
 }
 func main() {
 	_ = base.CmdRoot.Execute()
