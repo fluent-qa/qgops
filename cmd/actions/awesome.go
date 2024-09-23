@@ -2,18 +2,16 @@ package actions
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"log/slog"
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/samber/lo"
-
-	"github.com/imroc/req/v3"
-
 	"github.com/fluent-qa/qgops/internal/utils/jsonutil"
 	_ "github.com/fluent-qa/qgops/internal/utils/qhttp"
+	"github.com/imroc/req/v3"
+	"github.com/samber/lo"
+	"github.com/spf13/cobra"
 )
 
 var (
