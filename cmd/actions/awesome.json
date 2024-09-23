@@ -1,0 +1,21 @@
+{
+  "awesomes": [
+    {
+      "category": "build-x",
+      "github_url": " https://github.com/codecrafters-io/build-your-own-x.git"
+    },
+    {
+      "category": "ai",
+      "github_url": "https://github.com/hyp1231/awesome-llm-powered-agent.git"
+    },
+    {
+      "category": "ai",
+      "github_url": "https://github.com/Shubhamsaboo/awesome-llm-apps.git"
+    },
+    {
+      "category": "ai",
+      "github_url": "https://github.com/e2b-dev/awesome-ai-agents.git"
+    }
+  ],
+  "outputDir": "/Users/patrick/workspace/personal/fluent-stacks/goway/qgops/docs/awesome"
+}

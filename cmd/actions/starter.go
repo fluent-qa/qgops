@@ -1,12 +1,11 @@
 package actions
 
 import (
+	"github.com/fluent-qa/qgops/internal/utils/shell"
+	"github.com/spf13/cobra"
 	_ "log/slog"
 	"path"
 	"strings"
-
-	"github.com/fluent-qa/qgops/internal/utils/shell"
-	"github.com/spf13/cobra"
 )
 
 var starterActions = shell.LoadCommands(path.Join(WorkSpaceDir, "starters.json"))

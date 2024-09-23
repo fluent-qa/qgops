@@ -19,12 +19,17 @@ func NewHttpClient() *Client {
 }
 
 func (h *Client) Get(url string) (string, string, *req.Response) {
-	resp := h.Client.R(). // Use R() to create a request.
-				MustGet(url)
+	resp, _ := h.Client.R(). // Use R() to create a request.
+					Get(url)
 	return resp.Status, resp.String(), resp
 }
 
 func (h *Client) DebugOptions() {
 	req.EnableAutoDecode()
 	req.EnableDebugLog()
+}
+
+func (h *Client) SetProxy(proxyUrl string) *Client {
+	h.Client.SetProxyURL(proxyUrl)
+	return h
 }
