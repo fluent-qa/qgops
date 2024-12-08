@@ -15,7 +15,7 @@ test: ## run go tests
 	go test -v ./...
 
 PHONY: PB
-PB: ## build pocketbase
+PB: ## build pocket-base
 	go build app/pb/pbserver.go
 
 integration-test: ### run integration-test
@@ -26,6 +26,10 @@ integration-test: ### run integration-test
 .PHONY: build-cli
 build-cli:
 	go build cmd/fluent.go
+
+.PHONY: build-pb
+build-pb:
+	go build app/pb/pbserver.go
 
 .PHONY: format
 format:
