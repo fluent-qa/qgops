@@ -3,11 +3,10 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
+	"github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"strconv"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 func statusCodeToText(status int) string {

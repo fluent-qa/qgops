@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/fluent-qa/qgops/internal/utils/jsonutil"
-	_ "github.com/fluent-qa/qgops/internal/utils/qhttp"
+	"github.com/fluent-qa/qgops/pkg/utils/jsonutil"
+	_ "github.com/fluent-qa/qgops/pkg/utils/qhttp"
 	"github.com/imroc/req/v3"
 	"github.com/samber/lo"
 	"github.com/spf13/cobra"

@@ -3,20 +3,19 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Lobsters struct {
 	widgetBase     `yaml:",inline"`
-	Posts          feed.ForumPosts `yaml:"-"`
-	Limit          int             `yaml:"limit"`
-	CollapseAfter  int             `yaml:"collapse-after"`
-	SortBy         string          `yaml:"sort-by"`
-	Tags           []string        `yaml:"tags"`
-	ShowThumbnails bool            `yaml:"-"`
+	Posts          feed2.ForumPosts `yaml:"-"`
+	Limit          int              `yaml:"limit"`
+	CollapseAfter  int              `yaml:"collapse-after"`
+	SortBy         string           `yaml:"sort-by"`
+	Tags           []string         `yaml:"tags"`
+	ShowThumbnails bool             `yaml:"-"`
 }
 
 func (widget *Lobsters) Initialize() error {
@@ -38,7 +37,7 @@ func (widget *Lobsters) Initialize() error {
 }
 
 func (widget *Lobsters) Update(ctx context.Context) {
-	posts, err := feed.FetchLobstersPosts(widget.SortBy, widget.Tags)
+	posts, err := feed2.FetchLobstersPosts(widget.SortBy, widget.Tags)
 
 	if !widget.canContinueUpdateAfterHandlingErr(err) {
 		return

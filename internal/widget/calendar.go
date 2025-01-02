@@ -3,14 +3,14 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
-	"github.com/fluent-qa/qgops/pkg/feed"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"time"
 )
 
 type Calendar struct {
 	widgetBase `yaml:",inline"`
-	Calendar   *feed.Calendar
+	Calendar   *feed2.Calendar
 }
 
 func (widget *Calendar) Initialize() error {
@@ -20,7 +20,7 @@ func (widget *Calendar) Initialize() error {
 }
 
 func (widget *Calendar) Update(ctx context.Context) {
-	widget.Calendar = feed.NewCalendar(time.Now())
+	widget.Calendar = feed2.NewCalendar(time.Now())
 	widget.withError(nil).scheduleNextUpdate()
 }
 

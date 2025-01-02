@@ -3,10 +3,9 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
+	"github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type TwitchGames struct {

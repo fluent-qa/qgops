@@ -1,8 +1,8 @@
 package actions
 
 import (
-	"github.com/fluent-qa/qgops/internal/utils"
-	"github.com/fluent-qa/qgops/internal/utils/shell"
+	"github.com/fluent-qa/qgops/pkg/utils"
+	"github.com/fluent-qa/qgops/pkg/utils/shell"
 	_ "log/slog"
 
 	"github.com/spf13/cobra"
@@ -29,7 +29,7 @@ func init() {
 	IssueCmd.Flags().StringVarP(&issueTitle, "title", "t", "", "Title of the issue")
 	IssueCmd.Flags().StringVarP(&issueBody, "body", "b", "", "Body of the issue")
 	IssueCmd.Flags().StringVarP(&issueDoc, "doc", "d", "", "Body do of the issue")
-	IssueCmd.MarkFlagRequired("title")
+	_ = IssueCmd.MarkFlagRequired("title")
 	//IssueCmd.MarkFlagRequired("body")
 }
 

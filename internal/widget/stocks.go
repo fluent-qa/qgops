@@ -3,19 +3,18 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Markets struct {
 	widgetBase     `yaml:",inline"`
-	StocksRequests []feed.MarketRequest `yaml:"stocks"`
-	MarketRequests []feed.MarketRequest `yaml:"markets"`
-	Sort           string               `yaml:"sort-by"`
-	Style          string               `yaml:"style"`
-	Markets        feed.Markets         `yaml:"-"`
+	StocksRequests []feed2.MarketRequest `yaml:"stocks"`
+	MarketRequests []feed2.MarketRequest `yaml:"markets"`
+	Sort           string                `yaml:"sort-by"`
+	Style          string                `yaml:"style"`
+	Markets        feed2.Markets         `yaml:"-"`
 }
 
 func (widget *Markets) Initialize() error {
@@ -29,7 +28,7 @@ func (widget *Markets) Initialize() error {
 }
 
 func (widget *Markets) Update(ctx context.Context) {
-	markets, err := feed.FetchMarketsDataFromYahoo(widget.MarketRequests)
+	markets, err := feed2.FetchMarketsDataFromYahoo(widget.MarketRequests)
 
 	if !widget.canContinueUpdateAfterHandlingErr(err) {
 		return

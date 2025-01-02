@@ -1,7 +1,7 @@
 package actions
 
 import (
-	"github.com/fluent-qa/qgops/internal/utils/shell"
+	"github.com/fluent-qa/qgops/pkg/utils/shell"
 	"github.com/spf13/cobra"
 	"path"
 	"strings"

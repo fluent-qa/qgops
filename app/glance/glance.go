@@ -8,6 +8,7 @@ import (
 	"github.com/fluent-qa/qgops/internal/widget"
 	"log/slog"
 	"net/http"
+	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
@@ -219,4 +220,44 @@ func (a *Application) Serve() error {
 
 	slog.Info("Starting server", "host", a.Config.Server.Host, "port", a.Config.Server.Port)
 	return server.ListenAndServe()
+}
+
+func Main() int {
+	options, err := ParseCliOptions()
+
+	if err != nil {
+		fmt.Println(err)
+		return 1
+	}
+
+	configFile, err := os.Open(options.ConfigPath)
+
+	if err != nil {
+		fmt.Printf("failed opening config file: %v\n", err)
+		return 1
+	}
+
+	config, err := NewConfigFromYml(configFile)
+	configFile.Close()
+
+	if err != nil {
+		fmt.Printf("failed parsing config file: %v\n", err)
+		return 1
+	}
+
+	if options.Intent == CliIntentServe {
+		app, err := NewApplication(config)
+
+		if err != nil {
+			fmt.Printf("failed creating application: %v\n", err)
+			return 1
+		}
+
+		if err := app.Serve(); err != nil {
+			fmt.Printf("qhttp server error: %v\n", err)
+			return 1
+		}
+	}
+
+	return 0
 }

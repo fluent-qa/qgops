@@ -3,21 +3,20 @@ package widget
 import (
 	"context"
 	"fmt"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Weather struct {
 	widgetBase   `yaml:",inline"`
-	Location     string          `yaml:"location"`
-	ShowAreaName bool            `yaml:"show-area-name"`
-	HideLocation bool            `yaml:"hide-location"`
-	HourFormat   string          `yaml:"hour-format"`
-	Units        string          `yaml:"units"`
-	Place        *feed.PlaceJson `yaml:"-"`
-	Weather      *feed.Weather   `yaml:"-"`
-	TimeLabels   [12]string      `yaml:"-"`
+	Location     string           `yaml:"location"`
+	ShowAreaName bool             `yaml:"show-area-name"`
+	HideLocation bool             `yaml:"hide-location"`
+	HourFormat   string           `yaml:"hour-format"`
+	Units        string           `yaml:"units"`
+	Place        *feed2.PlaceJson `yaml:"-"`
+	Weather      *feed2.Weather   `yaml:"-"`
+	TimeLabels   [12]string       `yaml:"-"`
 }
 
 var timeLabels12h = [12]string{"2am", "4am", "6am", "8am", "10am", "12pm", "2pm", "4pm", "6pm", "8pm", "10pm", "12am"}
@@ -49,7 +48,7 @@ func (widget *Weather) Initialize() error {
 
 func (widget *Weather) Update(ctx context.Context) {
 	if widget.Place == nil {
-		place, err := feed.FetchPlaceFromName(widget.Location)
+		place, err := feed2.FetchPlaceFromName(widget.Location)
 
 		if err != nil {
 			widget.withError(err).scheduleEarlyUpdate()
@@ -59,7 +58,7 @@ func (widget *Weather) Update(ctx context.Context) {
 		widget.Place = place
 	}
 
-	weather, err := feed.FetchWeatherForPlace(widget.Place, widget.Units)
+	weather, err := feed2.FetchWeatherForPlace(widget.Place, widget.Units)
 
 	if !widget.canContinueUpdateAfterHandlingErr(err) {
 		return

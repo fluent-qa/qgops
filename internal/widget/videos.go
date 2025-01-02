@@ -3,20 +3,19 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Videos struct {
 	widgetBase        `yaml:",inline"`
-	Videos            feed.Videos `yaml:"-"`
-	VideoUrlTemplate  string      `yaml:"video-url-template"`
-	Style             string      `yaml:"style"`
-	CollapseAfterRows int         `yaml:"collapse-after-rows"`
-	Channels          []string    `yaml:"channels"`
-	Limit             int         `yaml:"limit"`
+	Videos            feed2.Videos `yaml:"-"`
+	VideoUrlTemplate  string       `yaml:"video-url-template"`
+	Style             string       `yaml:"style"`
+	CollapseAfterRows int          `yaml:"collapse-after-rows"`
+	Channels          []string     `yaml:"channels"`
+	Limit             int          `yaml:"limit"`
 }
 
 func (widget *Videos) Initialize() error {
@@ -34,7 +33,7 @@ func (widget *Videos) Initialize() error {
 }
 
 func (widget *Videos) Update(ctx context.Context) {
-	videos, err := feed.FetchYoutubeChannelUploads(widget.Channels, widget.VideoUrlTemplate)
+	videos, err := feed2.FetchYoutubeChannelUploads(widget.Channels, widget.VideoUrlTemplate)
 
 	if !widget.canContinueUpdateAfterHandlingErr(err) {
 		return

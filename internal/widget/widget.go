@@ -5,12 +5,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"log/slog"
 	"math"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 
 	"gopkg.in/yaml.v3"
 )

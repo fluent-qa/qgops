@@ -2,7 +2,7 @@ package feed
 
 import (
 	"fmt"
-	"github.com/fluent-qa/qgops/internal/utils/qhttp"
+	"github.com/fluent-qa/qgops/pkg/utils/qhttp"
 	"log/slog"
 	"net/http"
 	"os"

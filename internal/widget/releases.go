@@ -3,15 +3,14 @@ package widget
 import (
 	"context"
 	"github.com/fluent-qa/qgops/internal/assets"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Releases struct {
 	widgetBase    `yaml:",inline"`
-	Releases      feed.AppReleases  `yaml:"-"`
+	Releases      feed2.AppReleases `yaml:"-"`
 	Repositories  []string          `yaml:"repositories"`
 	Token         OptionalEnvString `yaml:"token"`
 	Limit         int               `yaml:"limit"`
@@ -33,7 +32,7 @@ func (widget *Releases) Initialize() error {
 }
 
 func (widget *Releases) Update(ctx context.Context) {
-	releases, err := feed.FetchLatestReleasesFromGithub(widget.Repositories, string(widget.Token))
+	releases, err := feed2.FetchLatestReleasesFromGithub(widget.Repositories, string(widget.Token))
 
 	if !widget.canContinueUpdateAfterHandlingErr(err) {
 		return

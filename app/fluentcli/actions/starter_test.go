@@ -6,7 +6,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/fluent-qa/qgops/internal/utils/shell"
+	"github.com/fluent-qa/qgops/pkg/utils/shell"
 )
 
 func TestCreateStartProject(t *testing.T) {

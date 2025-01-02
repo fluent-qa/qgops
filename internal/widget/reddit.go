@@ -4,27 +4,26 @@ import (
 	"context"
 	"errors"
 	"github.com/fluent-qa/qgops/internal/assets"
+	feed2 "github.com/fluent-qa/qgops/internal/feed"
 	"html/template"
 	"strings"
 	"time"
-
-	"github.com/fluent-qa/qgops/pkg/feed"
 )
 
 type Reddit struct {
 	widgetBase          `yaml:",inline"`
-	Posts               feed.ForumPosts `yaml:"-"`
-	Subreddit           string          `yaml:"subreddit"`
-	Style               string          `yaml:"style"`
-	ShowThumbnails      bool            `yaml:"show-thumbnails"`
-	SortBy              string          `yaml:"sort-by"`
-	TopPeriod           string          `yaml:"top-period"`
-	Search              string          `yaml:"search"`
-	ExtraSortBy         string          `yaml:"extra-sort-by"`
-	CommentsUrlTemplate string          `yaml:"comments-url-template"`
-	Limit               int             `yaml:"limit"`
-	CollapseAfter       int             `yaml:"collapse-after"`
-	RequestUrlTemplate  string          `yaml:"request-url-template"`
+	Posts               feed2.ForumPosts `yaml:"-"`
+	Subreddit           string           `yaml:"subreddit"`
+	Style               string           `yaml:"style"`
+	ShowThumbnails      bool             `yaml:"show-thumbnails"`
+	SortBy              string           `yaml:"sort-by"`
+	TopPeriod           string           `yaml:"top-period"`
+	Search              string           `yaml:"search"`
+	ExtraSortBy         string           `yaml:"extra-sort-by"`
+	CommentsUrlTemplate string           `yaml:"comments-url-template"`
+	Limit               int              `yaml:"limit"`
+	CollapseAfter       int              `yaml:"collapse-after"`
+	RequestUrlTemplate  string           `yaml:"request-url-template"`
 }
 
 func (widget *Reddit) Initialize() error {
@@ -77,7 +76,7 @@ func isValidRedditTopPeriod(period string) bool {
 
 func (widget *Reddit) Update(ctx context.Context) {
 	// TODO: refactor, use a struct to pass all of these
-	posts, err := feed.FetchSubredditPosts(
+	posts, err := feed2.FetchSubredditPosts(
 		widget.Subreddit,
 		widget.SortBy,
 		widget.TopPeriod,

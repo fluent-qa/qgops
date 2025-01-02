@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/fluent-qa/qgops/internal/utils"
-	"github.com/fluent-qa/qgops/internal/utils/jsonutil"
+	"github.com/fluent-qa/qgops/pkg/utils"
+	"github.com/fluent-qa/qgops/pkg/utils/jsonutil"
 	"github.com/samber/lo"
 )
 
