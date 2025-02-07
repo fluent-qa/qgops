@@ -1,2 +1,9 @@
 installations:
+<<<<<<< HEAD
   - go get github.com/gookit/goutil
+=======
+  - https://github.com/gookit/goutil
+
+infra:
+  - https://github.com/dapr/dapr.git
+>>>>>>> 5abef92 (refine codes)

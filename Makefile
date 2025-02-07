@@ -7,7 +7,7 @@ PATH:=$(LOCAL_BIN):$(PATH)
 .PHONY: build-fluent
 build-fluent:
 	# @go build -ldflags "-X main.version=$(shell git describe --abbrev=0 --tags)" -o fluent
-	go build cmd/fluent.go
+	go build app/fluentcli/fluent.go
 
 
 PHONY: test
@@ -16,7 +16,11 @@ test: ## run go tests
 
 PHONY: PB
 PB: ## build pocket-base
+<<<<<<< HEAD
 	go build app/pb/pbserver.go
+=======
+	go build app/pb/pbapp.go
+>>>>>>> 5abef92 (refine codes)
 
 integration-test: ### run integration-test
 	go clean -testcache && go test -v ./integration-test/...
@@ -25,7 +29,11 @@ integration-test: ### run integration-test
 
 .PHONY: build-cli
 build-cli:
-	go build cmd/fluent.go
+	go build app/fluentcli/fluent.go
+
+.PHONY: build-pb
+build-pb:
+	go build app/pb/pbapp.go
 
 .PHONY: build-pb
 build-pb:

@@ -44,9 +44,8 @@
       "name": "python",
       "desc": "Create Python Template Project",
       "commands": [
-        "pdm init -n https://github.com/fluent-qa/fluentqa-pytpl.git",
-        "rm -rf templates/"
-
+        "git clone https://github.com/fluent-qa/fluentqa-pytpl.git --depth=1",
+        "cd fluentqa-pytpl && rm -rf .git"
       ]
     }
   ]
